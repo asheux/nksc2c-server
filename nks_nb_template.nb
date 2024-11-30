@@ -1,0 +1,97 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Wolfram 14.1' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       154,          7]
+NotebookDataLength[      2733,         89]
+NotebookOptionsPosition[      1827,         64]
+NotebookOutlinePosition[      2220,         80]
+CellTagsIndexPosition[      2177,         77]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["[Figure Name]", "Title",
+ CellChangeTimes->{{3.9403301547313223`*^9, 3.940330168592269*^9}, {
+  3.9403316376887617`*^9, 3.940331641759857*^9}, {3.9403317260851717`*^9, 
+  3.9403317650505733`*^9}, {3.940331821655162*^9, 
+  3.940331825269782*^9}},ExpressionUUID->"9b6abf8d-b15b-43a6-85d9-\
+468907d2027a"],
+
+Cell[CellGroupData[{
+
+Cell["Code:", "Section",
+ CellChangeTimes->{{3.940330255388256*^9, 3.940330269800881*^9}, {
+  3.940330494762353*^9, 
+  3.940330496036756*^9}},ExpressionUUID->"77616aa7-0d42-44ca-84d2-\
+2d2e60c8b584"],
+
+Cell["\<\
+Author:
+Date:\
+\>", "Text",
+ CellChangeTimes->{{3.940331421534711*^9, 
+  3.940331495856226*^9}},ExpressionUUID->"0c5a6c60-5c76-4448-81f5-\
+d272821d792b"],
+
+Cell[BoxData[
+ RowBox[{"(*", 
+  RowBox[{"Add", " ", "code", " ", "here"}], "*)"}]], "Input",
+ CellChangeTimes->{{3.94033166240695*^9, 
+  3.9403316902263527`*^9}},ExpressionUUID->"aadda149-1aa0-4bf1-a551-\
+f8e5a7041680"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Comments/Concerns:", "Section",
+ CellChangeTimes->{{3.9403311921957903`*^9, 3.9403312079824047`*^9}, 
+   3.9403315841788483`*^9},ExpressionUUID->"39a2e2ce-4d76-49a2-8e06-\
+3fdf4ad71227"],
+
+Cell["", "Item",ExpressionUUID->"84391124-29e0-42b7-b9ae-23bed1f0d820"]
+}, Open  ]]
+}, Open  ]]
+},
+WindowSize->{943, 965},
+WindowMargins->{{176, Automatic}, {Automatic, 5}},
+FrontEndVersion->"14.1 for Mac OS X x86 (64-bit) (July 16, 2024)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"a569d84c-504d-4004-bbc8-733ec3f94fab"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[576, 22, 308, 5, 96, "Title",ExpressionUUID->"9b6abf8d-b15b-43a6-85d9-468907d2027a"],
+Cell[CellGroupData[{
+Cell[909, 31, 199, 4, 66, "Section",ExpressionUUID->"77616aa7-0d42-44ca-84d2-2d2e60c8b584"],
+Cell[1111, 37, 163, 6, 55, "Text",ExpressionUUID->"0c5a6c60-5c76-4448-81f5-d272821d792b"],
+Cell[1277, 45, 219, 5, 29, "Input",ExpressionUUID->"aadda149-1aa0-4bf1-a551-f8e5a7041680"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[1533, 55, 192, 3, 66, "Section",ExpressionUUID->"39a2e2ce-4d76-49a2-8e06-3fdf4ad71227"],
+Cell[1728, 60, 71, 0, 30, "Item",ExpressionUUID->"84391124-29e0-42b7-b9ae-23bed1f0d820"]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+

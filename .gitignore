@@ -1,0 +1,13 @@
+# Env
+venv
+.env
+
+# Py
+__pycache__/
+.DS_Store
+migrations/
+
+# trash_detection_model.pt
+
+# Vim stuff
+*.sw?
