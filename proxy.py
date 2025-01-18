@@ -33,21 +33,35 @@ def nksc2c_notebook():
     if name and len(name) > 50:
         return jsonify({'error': {'name': 'Name too long.'}}), 400
 
+    page_name = data.get('page_name')
     social_link = data.get('social_link')
     notebook_name = data.get('notebook_name', 'new_notebook')
     notebook_chapter = data.get('notebook_chapter')
     notebook_link = f"https://tccup.s3.amazonaws.com/{parse.quote(notebook_name)}.nb" 
+    status = StatusEnum.PENDING
     name_args = {}
     if name:
         name_args = {"name": name}
 
-    new_nks = NKS(
-        **name_args,
-        social_link=social_link,
-        notebook_name=notebook_name,
-        notebook_link=notebook_link,
-        notebook_chapter=notebook_chapter,
-    )
+    nks = NKS.query.filter_by(page_name=page_name).first()
+    if nks:
+        nks.social_link = social_link
+        nks.notebook_name = notebook_name
+        nks.notebook_link = notebook_link
+        nks.notebook_chapter = notebook_chapter
+        nks.name = name
+        nks.status = status
+        new_nks = nks
+    else:
+        new_nks = NKS(
+            **name_args,
+            social_link=social_link,
+            notebook_name=notebook_name,
+            notebook_link=notebook_link,
+            notebook_chapter=notebook_chapter,
+            page_name=page_name,
+            status=status
+        )
     new_nks.upload_token = new_nks.generate_upload_token()
     db.session.add(new_nks)
     db.session.commit()
@@ -73,7 +87,9 @@ def update_nksc2c_notebook(nksc2c_id):
 
 @app.route('/nksc2c_notebooks', methods=['GET'])
 def nksc2c_notebooks():
-    nks = NKS.query.order_by(NKS.created_at.desc()).all()
+    pages = request.args.get("pages")
+    page_names = pages.split(",")
+    nks = NKS.query.order_by(NKS.created_at.desc()).filter(NKS.page_name.in_(page_names)).all()
     allnks = [t.to_dict() for t in nks]
     return jsonify({'data': allnks})
 
