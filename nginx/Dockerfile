@@ -11,6 +11,6 @@ COPY ./nginx.conf /etc/nginx/conf.d/default.conf
 RUN  mkdir -p ./nginx/www/certbot/.well-known/acme-challenge
 
 RUN chmod +x /usr/local/bin/nginx-entrypoint.sh
-EXPOSE 80
+EXPOSE 8080
 EXPOSE 443
 ENTRYPOINT ["/usr/local/bin/nginx-entrypoint.sh"]

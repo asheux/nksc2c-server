@@ -6,7 +6,7 @@ from flask_migrate import Migrate
 from sqlalchemy import or_
 
 from nksc2c.s3_client import S3Client
-from nksc2c.models import NKS, db
+from nksc2c.models import NKS, db, StatusEnum
 from create_app import app
 
 migrate = Migrate(app, db)
@@ -76,3 +76,26 @@ def nksc2c_notebooks():
     nks = NKS.query.order_by(NKS.created_at.desc()).all()
     allnks = [t.to_dict() for t in nks]
     return jsonify({'data': allnks})
+
+@app.route('/uploadnksnotebook', methods=['POST'])
+def uploadnksnotebook():
+    file = request.files.get("file")
+    token = request.form.get('token')
+    notebook_name = request.form.get('notebook_name')
+    if not file:
+        return jsonify({"error": "File is required for upload."})
+
+    if not token:
+        return jsonify({"error": "Token is required for upload."})
+    
+    nksc2cnotebook = NKS.query.filter_by(notebook_name=notebook_name).first()
+    if token != nksc2cnotebook.upload_token:
+        return jsonify({"error": "The upload token provided is not correct. Please contact asheuh49@gmail.com for assistance."})
+
+    # Upload to the cloud
+    s3_client = S3Client()
+    resource_url = s3_client.upload_file_to_s3(f"{notebook_name}.nb", file)
+    nksc2cnotebook.status = StatusEnum.GOOD
+    db.session.add(nksc2cnotebook)
+    db.session.commit()
+    return jsonify({'data': nksc2cnotebook.to_dict()})

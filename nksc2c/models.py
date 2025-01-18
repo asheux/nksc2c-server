@@ -31,7 +31,7 @@ class NKS(db.Model):
 
     def generate_upload_token(self) -> str:
         token = ""
-        for i in range(9):
+        for i in range(6):
             r = random.randint(0, 9)
             token += f"{r}"
         return token

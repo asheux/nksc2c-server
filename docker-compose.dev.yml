@@ -28,7 +28,7 @@ services:
     networks:
       - flasknet
     ports:
-      - 5000:5000
+      - 8000:8000
 
   nginx:
     build:
@@ -45,7 +45,7 @@ services:
     networks:
       - flasknet
     ports:
-      - 80:80
+      - 8080:80
       - 443:443
     restart: always
 
@@ -66,4 +66,5 @@ volumes:
 
 networks:
   flasknet:
+    name: flasknet
     driver: bridge

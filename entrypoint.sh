@@ -21,7 +21,7 @@ project_dir=/code
 
 wait_for_db() {
   while ! nc -z "${DB_HOST}" "${DB_PORT}"; do
-    echo "Waiting for DB to be ready"
+    echo "Waiting for DB to be ready HOST: ${DB_HOST} PORT: ${DB_PORT}"
     sleep 2
   done
 }
@@ -49,13 +49,13 @@ runprodserver)
   wait_for_db
   flask db migrate
   flask db upgrade
-  gunicorn --bind 0.0.0.0:5000 wsgi:app --workers=2 --preload
+  gunicorn --bind 0.0.0.0:8000 wsgi:app --workers=2 --preload
   ;;
 rundevserver)
   wait_for_db
   flask db migrate
   flask db upgrade
-  flask run --host=0.0.0.0 --port=5000 --debug
+  flask run --host=0.0.0.0 --port=8000 --debug
   ;;
 python)
   shift 1
