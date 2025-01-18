@@ -38,6 +38,7 @@ init)
   flask db init
   flask db migrate
   flask db upgrade
+  python preprocess_data.py
   ;;
 dropall)
   wait_for_db
@@ -49,14 +50,12 @@ runprodserver)
   wait_for_db
   flask db migrate
   flask db upgrade
-  python preprocess_data.py
   gunicorn --bind 0.0.0.0:8000 wsgi:app --workers=2 --preload
   ;;
 rundevserver)
   wait_for_db
   flask db migrate
   flask db upgrade
-  python preprocess_data.py
   flask run --host=0.0.0.0 --port=8000 --debug
   ;;
 preprocessdata)
