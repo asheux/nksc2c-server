@@ -1,4 +1,6 @@
+import io
 from urllib import parse
+from zipfile import ZipFile
 
 from flask import Flask, request, jsonify
 from flask_cors import CORS
@@ -96,6 +98,10 @@ def nksc2c_notebooks():
 @app.route('/uploadnksnotebook', methods=['POST'])
 def uploadnksnotebook():
     file = request.files.get("file")
+    zip_file = ZipFile(io.BytesIO(file.read()))
+    extracted_files = zip_file.namelist()
+    file_name = extracted_files[0]
+    extracted_content = zip_file.read(file_name)
     token = request.form.get('token')
     notebook_name = request.form.get('notebook_name')
     if not file:
@@ -110,7 +116,7 @@ def uploadnksnotebook():
 
     # Upload to the cloud
     s3_client = S3Client()
-    resource_url = s3_client.upload_file_to_s3(f"{notebook_name}.nb", file)
+    resource_url = s3_client.upload_file_to_s3(f"{notebook_name}.nb", io.BytesIO(extracted_content))
     nksc2cnotebook.status = StatusEnum.GOOD
     db.session.add(nksc2cnotebook)
     db.session.commit()

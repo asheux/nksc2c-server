@@ -1,4 +1,5 @@
 import os
+import mimetypes
 import boto3
 
 from urllib import parse
@@ -38,10 +39,16 @@ class S3Client:
     def upload_file_to_s3(self, file_name, file) -> str:
         bucket = self.bucket_name
         s3_client = self.get_s3_client()
+
+        # Guess the MIME type from the file name
+        content_type, _ = mimetypes.guess_type(file_name)
+        if not content_type:
+            content_type = "application/octet-stream"
+
         try:
             s3_client.upload_fileobj(
                 file, bucket,
-                file_name, ExtraArgs={"ContentType": file.content_type}
+                file_name, ExtraArgs={"ContentType": content_type}
             )
             resource_url = f"https://{bucket}.s3.amazonaws.com/{parse.quote(file_name)}"
             return resource_url
