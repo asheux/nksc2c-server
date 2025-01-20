@@ -103,6 +103,7 @@ def uploadnksnotebook():
     file_name = extracted_files[0]
     extracted_content = zip_file.read(file_name)
     token = request.form.get('token')
+    status = request.form.get('status')
     notebook_name = request.form.get('notebook_name')
     if not file:
         return jsonify({"error": "File is required for upload."})
@@ -117,7 +118,7 @@ def uploadnksnotebook():
     # Upload to the cloud
     s3_client = S3Client()
     resource_url = s3_client.upload_file_to_s3(f"{notebook_name}.nb", io.BytesIO(extracted_content))
-    nksc2cnotebook.status = StatusEnum.GOOD
+    nksc2cnotebook.status = StatusEnum.APPROVED if status == "approved" else StatusEnum.GOOD
     db.session.add(nksc2cnotebook)
     db.session.commit()
     return jsonify({'data': nksc2cnotebook.to_dict()})
