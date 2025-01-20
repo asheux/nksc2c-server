@@ -118,7 +118,7 @@ def uploadnksnotebook():
     # Upload to the cloud
     s3_client = S3Client()
     resource_url = s3_client.upload_file_to_s3(f"{notebook_name}.nb", io.BytesIO(extracted_content))
-    nksc2cnotebook.status = StatusEnum.APPROVED if status in ["approved", "good"] else StatusEnum.GOOD
+    nksc2cnotebook.status = StatusEnum.APPROVED if status == "approved" else StatusEnum.GOOD
     db.session.add(nksc2cnotebook)
     db.session.commit()
     return jsonify({'data': nksc2cnotebook.to_dict()})
