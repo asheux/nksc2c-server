@@ -10,6 +10,7 @@ migrations/
 # trash_detection_model.pt
 
 images.json
+newimages.json
 
 # Vim stuff
 *.sw?

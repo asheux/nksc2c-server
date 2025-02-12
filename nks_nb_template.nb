@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       154,          7]
-NotebookDataLength[      2733,         89]
-NotebookOptionsPosition[      1827,         64]
-NotebookOutlinePosition[      2220,         80]
-CellTagsIndexPosition[      2177,         77]
+NotebookDataLength[     11376,        316]
+NotebookOptionsPosition[      9423,        270]
+NotebookOutlinePosition[      9816,        286]
+CellTagsIndexPosition[      9773,        283]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -24,46 +24,252 @@ Cell["[Figure Name]", "Title",
  CellChangeTimes->{{3.9403301547313223`*^9, 3.940330168592269*^9}, {
   3.9403316376887617`*^9, 3.940331641759857*^9}, {3.9403317260851717`*^9, 
   3.9403317650505733`*^9}, {3.940331821655162*^9, 
-  3.940331825269782*^9}},ExpressionUUID->"9b6abf8d-b15b-43a6-85d9-\
-468907d2027a"],
+  3.940331825269782*^9}},ExpressionUUID->"da7090d9-dfe9-4521-9b68-\
+b484a290207b"],
 
 Cell[CellGroupData[{
 
 Cell["Code:", "Section",
  CellChangeTimes->{{3.940330255388256*^9, 3.940330269800881*^9}, {
   3.940330494762353*^9, 
-  3.940330496036756*^9}},ExpressionUUID->"77616aa7-0d42-44ca-84d2-\
-2d2e60c8b584"],
+  3.940330496036756*^9}},ExpressionUUID->"21d75f4b-7c44-408d-af66-\
+75c51ac6c021"],
 
 Cell["\<\
 Author:
 Date:\
 \>", "Text",
  CellChangeTimes->{{3.940331421534711*^9, 
-  3.940331495856226*^9}},ExpressionUUID->"0c5a6c60-5c76-4448-81f5-\
-d272821d792b"],
+  3.940331495856226*^9}},ExpressionUUID->"936604b0-dcfa-4f05-a494-\
+a11b37d904c2"],
 
 Cell[BoxData[
  RowBox[{"(*", 
   RowBox[{"Add", " ", "code", " ", "here"}], "*)"}]], "Input",
  CellChangeTimes->{{3.94033166240695*^9, 
-  3.9403316902263527`*^9}},ExpressionUUID->"aadda149-1aa0-4bf1-a551-\
-f8e5a7041680"]
+  3.9403316902263527`*^9}},ExpressionUUID->"8b0411c5-23a5-4cc9-80d0-\
+d4f0d9879d67"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["NKS Figure:", "Section",
+ CellChangeTimes->{{3.94033057396984*^9, 3.940330574323436*^9}, {
+  3.940330614206695*^9, 3.940330622885029*^9}, {3.9403313436852427`*^9, 
+  3.94033134660398*^9}},ExpressionUUID->"6e257786-57dc-4ed1-9188-\
+729947ea4569"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", 
+   RowBox[{
+   "Copy", " ", "symbolic", " ", "graphics", " ", "and", " ", "paste", " ", 
+    "here"}], "*)"}], "\[IndentingNewLine]", 
+  RowBox[{"CloudGet", "[", "\"\<\>\"", "]"}]}]], "Input",
+ CellChangeTimes->{{3.946747781433364*^9, 3.94674781236078*^9}, 
+   3.946748009979157*^9},ExpressionUUID->"6f0e531a-2709-471b-b909-\
+66709c00d2ab"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["NKS code:", "Section",
+ CellChangeTimes->{{3.940331528021976*^9, 3.9403315325321407`*^9}, 
+   3.940345059361849*^9, {3.9404157976442833`*^9, 3.940415798188645*^9}, {
+   3.946747630084675*^9, 3.946747645901558*^9}, 
+   3.946747937482644*^9},ExpressionUUID->"7dab6cf0-3d8b-4bbd-82d4-\
+88c516568b4b"],
+
+Cell[BoxData[
+ RowBox[{"(*", 
+  RowBox[{
+   RowBox[{"If", " ", "NKS", " ", 
+    RowBox[{"book", "'"}], "s", " ", "figure", " ", "has", " ", "code", " ", 
+    "already"}], ",", " ", 
+   RowBox[{"paste", " ", "here"}]}], "*)"}]], "Input",
+ CellChangeTimes->{{3.946747945252226*^9, 
+  3.946748011868648*^9}},ExpressionUUID->"9efbfdda-e82e-4b91-8b6f-\
+a4c25b1f70e1"]
 }, Open  ]],
 
 Cell[CellGroupData[{
 
 Cell["Comments/Concerns:", "Section",
  CellChangeTimes->{{3.9403311921957903`*^9, 3.9403312079824047`*^9}, 
-   3.9403315841788483`*^9},ExpressionUUID->"39a2e2ce-4d76-49a2-8e06-\
-3fdf4ad71227"],
+   3.9403315841788483`*^9},ExpressionUUID->"3d790356-e480-4939-bb61-\
+a9707b058ca9"],
 
-Cell["", "Item",ExpressionUUID->"84391124-29e0-42b7-b9ae-23bed1f0d820"]
+Cell["", "Item",ExpressionUUID->"0558a4e8-96df-4b64-b441-c2b47da10db3"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Review details:", "Section",
+ CellChangeTimes->{{3.940332177685955*^9, 3.940332190520577*^9}, {
+  3.946747710639099*^9, 
+  3.9467477123864517`*^9}},ExpressionUUID->"4aa62ec2-30c5-43e0-83fa-\
+662815b41dad"],
+
+Cell[CellGroupData[{
+
+Cell["Comments:", "Subsection",
+ CellChangeTimes->{{3.940332591070056*^9, 
+  3.9403326019465*^9}},ExpressionUUID->"343c749c-3350-44c8-b0ac-a41564fcaaa9"],
+
+Cell[CellGroupData[{
+
+Cell["", "Item",ExpressionUUID->"429bfc34-4627-4b2b-90f9-b5aec49486de"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ InterpretationBox[
+  DynamicModuleBox[{Typeset`open = False}, 
+   TemplateBox[{"Expression", 
+     RowBox[{"DynamicModule", "[", 
+       DynamicBox[
+        FEPrivate`FrontEndResource["FEBitmaps", "IconizeEllipsis"]], "]"}], 
+     GridBox[{{
+        RowBox[{
+          TagBox["\"Byte count: \"", "IconizedLabel"], "\[InvisibleSpace]", 
+          TagBox["1504", "IconizedItem"]}]}}, 
+      GridBoxAlignment -> {"Columns" -> {{Left}}}, DefaultBaseStyle -> 
+      "Column", 
+      GridBoxItemSize -> {
+       "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], 
+     Dynamic[Typeset`open]},
+    "IconizedObject"]],
+  DynamicModule[{$CellContext`reviewStatus = None}, 
+   Column[{
+     Style["Review Status", Bold, 20], 
+     RadioButtonBar[
+      Dynamic[$CellContext`reviewStatus], {
+      "Approved" -> "Approved", "Minor Changes" -> "Minor Changes", 
+       "Major Changes" -> "Major Changes"}], 
+     Dynamic[
+      Style[
+       If[$CellContext`reviewStatus === None, 
+        "Please select a review status.", "Selected Review Status: " <> 
+        ToString[$CellContext`reviewStatus]], 14]]}, Spacings -> 1]],
+  SelectWithContents->True,
+  Selectable->False]], "Input",
+ CellChangeTimes->{{3.940332380663909*^9, 3.9403323806693497`*^9}, {
+   3.940332425482628*^9, 3.940332430481238*^9}, 3.940332526326579*^9, {
+   3.940332661850218*^9, 3.9403326986442213`*^9}, 3.940332731655918*^9, {
+   3.940332769379211*^9, 3.94033279722756*^9}, {3.94033285065625*^9, 
+   3.9403328806960783`*^9}, {3.9403329147344017`*^9, 3.940332983117008*^9}},
+ CellLabel->
+  "In[113]:=",ExpressionUUID->"eb445646-f07f-4386-b641-276ce84507ef"],
+
+Cell[BoxData[
+ DynamicModuleBox[{$CellContext`reviewStatus$$ = None}, 
+  TagBox[GridBox[{
+     {
+      StyleBox["\<\"Review Status\"\>",
+       StripOnInput->False,
+       FontSize->20,
+       FontWeight->Bold]},
+     {
+      InterpretationBox[
+       StyleBox[
+        RowBox[{GridBox[{
+           {
+            
+            RadioButtonBox[Dynamic[$CellContext`reviewStatus$$], {"Approved"},
+             
+             DefaultBaseStyle->"RadioButtonBar"], 
+            StyleBox["\<\"Approved\"\>", "RadioButtonBarLabel",
+             StripOnInput->False]}
+          },
+          AutoDelete->False,
+          BaselinePosition->{1, 2},
+          GridBoxAlignment->{"Columns" -> {{Left}}, "Rows" -> {{Baseline}}},
+          
+          GridBoxItemSize->{
+           "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}},
+          GridBoxSpacings->{"Columns" -> {
+              Offset[0.27999999999999997`], {
+               Offset[0.21]}, 
+              Offset[0.27999999999999997`]}, "Rows" -> {
+              Offset[0.2], {
+               Offset[0.4]}, 
+              Offset[0.2]}}], "  ", GridBox[{
+           {
+            
+            RadioButtonBox[Dynamic[$CellContext`reviewStatus$$], {
+             "Minor Changes"},
+             DefaultBaseStyle->"RadioButtonBar"], 
+            StyleBox["\<\"Minor Changes\"\>", "RadioButtonBarLabel",
+             StripOnInput->False]}
+          },
+          AutoDelete->False,
+          BaselinePosition->{1, 2},
+          GridBoxAlignment->{"Columns" -> {{Left}}, "Rows" -> {{Baseline}}},
+          
+          GridBoxItemSize->{
+           "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}},
+          GridBoxSpacings->{"Columns" -> {
+              Offset[0.27999999999999997`], {
+               Offset[0.21]}, 
+              Offset[0.27999999999999997`]}, "Rows" -> {
+              Offset[0.2], {
+               Offset[0.4]}, 
+              Offset[0.2]}}], "  ", GridBox[{
+           {
+            
+            RadioButtonBox[Dynamic[$CellContext`reviewStatus$$], {
+             "Major Changes"},
+             DefaultBaseStyle->"RadioButtonBar"], 
+            StyleBox["\<\"Major Changes\"\>", "RadioButtonBarLabel",
+             StripOnInput->False]}
+          },
+          AutoDelete->False,
+          BaselinePosition->{1, 2},
+          GridBoxAlignment->{"Columns" -> {{Left}}, "Rows" -> {{Baseline}}},
+          
+          GridBoxItemSize->{
+           "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}},
+          GridBoxSpacings->{"Columns" -> {
+              Offset[0.27999999999999997`], {
+               Offset[0.21]}, 
+              Offset[0.27999999999999997`]}, "Rows" -> {
+              Offset[0.2], {
+               Offset[0.4]}, 
+              Offset[0.2]}}]}], "Deploy"],
+       RadioButtonBar[
+        Dynamic[$CellContext`reviewStatus$$], {
+        "Approved" -> "Approved", "Minor Changes" -> "Minor Changes", 
+         "Major Changes" -> "Major Changes"}]]},
+     {
+      DynamicBox[ToBoxes[
+        Style[
+         If[$CellContext`reviewStatus$$ === None, 
+          "Please select a review status.", "Selected Review Status: " <> 
+          ToString[$CellContext`reviewStatus$$]], 14], StandardForm],
+       ImageSizeCache->{252.00000000000003`, {0.168, 9.982000000000001}}]}
+    },
+    DefaultBaseStyle->"Column",
+    GridBoxAlignment->{"Columns" -> {{Left}}},
+    GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}},
+    GridBoxSpacings->{"Columns" -> {{Automatic}}, "Rows" -> {{1}}}],
+   "Column"],
+  DynamicModuleValues:>{}]], "Output",
+ CellChangeTimes->{
+  3.940332381903503*^9, 3.940332436613912*^9, {3.940332527976618*^9, 
+   3.940332546138482*^9}, {3.940332671329677*^9, 3.940332685979704*^9}, {
+   3.940332775495057*^9, 3.940332799805953*^9}, {3.940332851886479*^9, 
+   3.940332881202293*^9}, {3.940332930702374*^9, 3.940332935637375*^9}, {
+   3.940332975049098*^9, 3.940332985420362*^9}, 3.9467476969450808`*^9},
+ CellLabel->
+  "Out[113]=",ExpressionUUID->"5628945c-e6d5-4ec7-85af-fa16d4dca524"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
 }, Open  ]]
 }, Open  ]]
 },
 WindowSize->{943, 965},
-WindowMargins->{{176, Automatic}, {Automatic, 5}},
+WindowMargins->{{Automatic, 330}, {Automatic, 4}},
 FrontEndVersion->"14.1 for Mac OS X x86 (64-bit) (July 16, 2024)",
 StyleDefinitions->"Default.nb",
 ExpressionUUID->"a569d84c-504d-4004-bbc8-733ec3f94fab"
@@ -80,15 +286,36 @@ CellTagsIndex->{}
 (*NotebookFileOutline
 Notebook[{
 Cell[CellGroupData[{
-Cell[576, 22, 308, 5, 96, "Title",ExpressionUUID->"9b6abf8d-b15b-43a6-85d9-468907d2027a"],
+Cell[576, 22, 308, 5, 96, "Title",ExpressionUUID->"da7090d9-dfe9-4521-9b68-b484a290207b"],
 Cell[CellGroupData[{
-Cell[909, 31, 199, 4, 66, "Section",ExpressionUUID->"77616aa7-0d42-44ca-84d2-2d2e60c8b584"],
-Cell[1111, 37, 163, 6, 55, "Text",ExpressionUUID->"0c5a6c60-5c76-4448-81f5-d272821d792b"],
-Cell[1277, 45, 219, 5, 29, "Input",ExpressionUUID->"aadda149-1aa0-4bf1-a551-f8e5a7041680"]
+Cell[909, 31, 199, 4, 66, "Section",ExpressionUUID->"21d75f4b-7c44-408d-af66-75c51ac6c021"],
+Cell[1111, 37, 163, 6, 55, "Text",ExpressionUUID->"936604b0-dcfa-4f05-a494-a11b37d904c2"],
+Cell[1277, 45, 219, 5, 29, "Input",ExpressionUUID->"8b0411c5-23a5-4cc9-80d0-d4f0d9879d67"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[1533, 55, 192, 3, 66, "Section",ExpressionUUID->"39a2e2ce-4d76-49a2-8e06-3fdf4ad71227"],
-Cell[1728, 60, 71, 0, 30, "Item",ExpressionUUID->"84391124-29e0-42b7-b9ae-23bed1f0d820"]
+Cell[1533, 55, 251, 4, 66, "Section",ExpressionUUID->"6e257786-57dc-4ed1-9188-729947ea4569"],
+Cell[1787, 61, 381, 9, 49, "Input",ExpressionUUID->"6f0e531a-2709-471b-b909-66709c00d2ab"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[2205, 75, 303, 5, 66, "Section",ExpressionUUID->"7dab6cf0-3d8b-4bbd-82d4-88c516568b4b"],
+Cell[2511, 82, 362, 9, 29, "Input",ExpressionUUID->"9efbfdda-e82e-4b91-8b6f-a4c25b1f70e1"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[2910, 96, 192, 3, 66, "Section",ExpressionUUID->"3d790356-e480-4939-bb61-a9707b058ca9"],
+Cell[3105, 101, 71, 0, 30, "Item",ExpressionUUID->"0558a4e8-96df-4b64-b441-c2b47da10db3"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[3213, 106, 211, 4, 66, "Section",ExpressionUUID->"4aa62ec2-30c5-43e0-83fa-662815b41dad"],
+Cell[CellGroupData[{
+Cell[3449, 114, 153, 2, 53, "Subsection",ExpressionUUID->"343c749c-3350-44c8-b0ac-a41564fcaaa9"],
+Cell[CellGroupData[{
+Cell[3627, 120, 71, 0, 30, "Item",ExpressionUUID->"429bfc34-4627-4b2b-90f9-b5aec49486de"],
+Cell[CellGroupData[{
+Cell[3723, 124, 1636, 37, 32, "Input",ExpressionUUID->"eb445646-f07f-4386-b641-276ce84507ef"],
+Cell[5362, 163, 3997, 100, 91, "Output",ExpressionUUID->"5628945c-e6d5-4ec7-85af-fa16d4dca524"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
 }, Open  ]]
 }, Open  ]]
 }

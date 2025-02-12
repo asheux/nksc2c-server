@@ -12,7 +12,7 @@ class S3Client:
         self.aws_access_key_id = os.getenv('AWS_ACCESS_KEY')
         self.aws_secret_access_key = os.getenv('AWS_SECRET_KEY')
         self.bucket_name = "tccup"
-        self.aws_default_region = "us-east-2"
+        self.aws_default_region = "us-east-1"
 
     def get_s3_client(self):
         return boto3.client(
@@ -31,7 +31,7 @@ class S3Client:
                 Body=content,
                 ContentType='application/mathematica'
             )
-            resource_url = f"https://{bucket}.s3.amazonaws.com/{parse.quote(file_name)}"
+            resource_url = f"https://{bucket}.s3.{self.aws_default_region}.amazonaws.com/{parse.quote(file_name)}"
             return resource_url
         except Exception as e:
             raise Exception()
@@ -50,7 +50,7 @@ class S3Client:
                 file, bucket,
                 file_name, ExtraArgs={"ContentType": content_type}
             )
-            resource_url = f"https://{bucket}.s3.amazonaws.com/{parse.quote(file_name)}"
+            resource_url = f"https://{bucket}.s3.{self.aws_default_region}.amazonaws.com/{parse.quote(file_name)}"
             return resource_url
         except Exception as e:
             raise Exception()
